@@ -1,46 +1,32 @@
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 public class MenuScene extends Scene {
-	Poly p;
-
-	@Override
+	
+	Button buttonStart;
+	
+	Font fntSmall = new Font("Impact", 0, 35);
 	public void draw(Graphics g) {
+		g.setColor(new Color(75, 0, 0));
+		g.fillRect(0, 0, Driver.screenWidth, Driver.screenHeight);
 		
-			p.draw(g, false);
-		
-		
-		g.setFont(Misc.fBig);
-		double start = System.currentTimeMillis();
-		g.drawString("" + p.surrounds(InputManager.mPos) + " n=" + p.numVerts() + " " + (System.currentTimeMillis() - start) + "ms", Driver.screenWidth / 2, Driver.screenHeight / 2);
-		
-		g.drawString("" + InputManager.mPos.toString(), Driver.screenWidth / 2, Driver.screenHeight / 2 + 250);
-		
+		buttonStart.draw(g, 130, 5);;
 	}
 
-	@Override
+	
 	public void update() {
-if(InputManager.mouse[1]) {
-	if(p.numVerts() == 0) {
-		p.addVerts(InputManager.mPos);
-		p.addVerts(InputManager.mPos);
-	}else {
-		for(int i = 0; i < 1; i++) {
-		p.addVert(p.numVerts()-1, InputManager.mPos);
-		}
+		buttonStart.update();
 		
-	}
-	
-	System.out.println(InputManager.mPos.toString());
-	
-}
+		if (buttonStart.clicked) {
+			
+			
+		}
 	}
 
-	@Override
 	public void init() {
-		p = new Poly();
-		//100, 100, 150, 150, 50, 150, 100, 100
+		buttonStart = new Button(new Rect(850, 400, 300, 50), null, 0, "Start", fntSmall, Color.GRAY, true, false);
 	}
 
 }
