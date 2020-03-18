@@ -1,9 +1,6 @@
 import java.awt.Color;
-import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -13,17 +10,13 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.event.MouseWheelEvent;
 import java.awt.event.MouseWheelListener;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 
-import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-@SuppressWarnings("serial") //little bitch boiiii
+@SuppressWarnings("serial")
 public class Driver extends JPanel
 		implements ActionListener, KeyListener, MouseListener, MouseMotionListener, MouseWheelListener {
 	static Font fb = new Font("Press Start", 0, 48);
@@ -35,10 +28,19 @@ public class Driver extends JPanel
 	static JFrame frame;
 	ArrayList<Long> fps = new ArrayList<Long>();
 	long frameStart = 0;
-	//YO MAMAa
 	
-	/*
+	  //==================================________________========================================\\
+	//===================================/| GITHUB STUFF |\==========================================\\
+	  //==================================````````````````==========================================\\
+	
+	//no direct commits to master unless u cool
+	//make sure ur on ur branch when ur messing with things
+	//try to comment ur code
+	
+	
+	/* 
 	 * To Make Your Branch the Same as Master Again:
+	 *      - Commit/Push ur branch
 	 *      - Right click the repository
 	 *      - Reset
 	 *      - Click master & Reset type = hard
@@ -48,12 +50,26 @@ public class Driver extends JPanel
 	 *      - push
 	 */
 	
-	// ============== end of settings ===================
+	/*
+	 * To Merge Your Branch With Master *Once its 100% Working*
+	 *      - Commit/Push ur branch
+	 *      - Right click the repository
+	 *      - switch to master
+	 *      - right click repository
+	 *      - merge
+	 *      - click your branch + merge
+	 *      - right click repository + push branch master
+	 *      - switch back to ur branch
+	 */
+	
+	
 
 	public void paint(Graphics g) { // main paint		
 		super.paintComponent(g);
 		SceneManager.draw(g);
 		
+		
+		//FPS COUNTER
 		g.setFont(fs);
 		fps.add((long) (1 / ((System.nanoTime() - frameStart) / Math.pow(10, 9))));
 		if (fps.size() >= 60) {
@@ -80,9 +96,6 @@ public class Driver extends JPanel
 	}
 
 	// ==================code above ===========================
-
-	public static void drawUI(Graphics g) {
-	}
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
