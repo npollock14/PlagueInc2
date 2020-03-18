@@ -37,6 +37,8 @@ public class Driver extends JPanel
 	long frameStart = 0;
 	//YO MAMAa
 	
+	//test reset
+	
 	// ============== end of settings ===================
 
 	public void paint(Graphics g) { // main paint		
