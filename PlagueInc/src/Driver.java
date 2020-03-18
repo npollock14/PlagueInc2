@@ -44,6 +44,8 @@ public class Driver extends JPanel
 	 *      - Click master & Reset type = hard
 	 *      - Then right click the repository
 	 *      - push branch
+	 *      - preview
+	 *      - push
 	 */
 	
 	// ============== end of settings ===================
