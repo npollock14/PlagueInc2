@@ -35,6 +35,7 @@ public class Driver extends JPanel
 	static JFrame frame;
 	ArrayList<Long> fps = new ArrayList<Long>();
 	long frameStart = 0;
+	//YO MAMA
 	
 	// ============== end of settings ===================
 
