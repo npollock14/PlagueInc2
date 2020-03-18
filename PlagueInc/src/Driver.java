@@ -23,7 +23,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-@SuppressWarnings("serial")
+@SuppressWarnings("serial") //little bitch boiii
 public class Driver extends JPanel
 		implements ActionListener, KeyListener, MouseListener, MouseMotionListener, MouseWheelListener {
 	static Font fb = new Font("Press Start", 0, 48);
