@@ -29,9 +29,9 @@ public class Driver extends JPanel
 	ArrayList<Long> fps = new ArrayList<Long>();
 	long frameStart = 0;
 	
-	  //==================================________________========================================\\
-	//===================================/| GITHUB STUFF |\==========================================\\
-	  //==================================````````````````==========================================\\
+	  //==================================__________________=========================================\\
+	//===================================/|\ GITHUB STUFF /|\==========================================\\
+	 //==================================````````````````````=========================================\\
 	
 	//no direct commits to master unless u cool
 	//make sure ur on ur branch when ur messing with things
@@ -91,8 +91,10 @@ public class Driver extends JPanel
 
 	private void init() {
 		SceneManager.initManager();
-		SceneManager.ms.init();
-		SceneManager.ms.setActive(true);
+//		SceneManager.ms.init();
+//		SceneManager.ms.setActive(true);
+		SceneManager.gs.init();
+		SceneManager.gs.setActive(true);
 	}
 
 	// ==================code above ===========================
