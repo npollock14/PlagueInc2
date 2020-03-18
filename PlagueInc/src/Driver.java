@@ -91,10 +91,10 @@ public class Driver extends JPanel
 
 	private void init() {
 		SceneManager.initManager();
-//		SceneManager.ms.init();
-//		SceneManager.ms.setActive(true);
+		SceneManager.ms.init();
+		SceneManager.ms.setActive(true);
 		SceneManager.gs.init();
-		SceneManager.gs.setActive(true);
+	//	SceneManager.gs.setActive(true);
 	}
 
 	// ==================code above ===========================

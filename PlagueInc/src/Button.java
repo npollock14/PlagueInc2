@@ -123,6 +123,9 @@ class Button {
 	}
 
 	public void draw(Graphics g, int xOff, int yOff) {
+		if(f != null) {
+			g.setFont(f);
+		}
 		if (c != null) {
 			g.setColor(c);
 		} else {

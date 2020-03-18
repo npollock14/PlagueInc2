@@ -12,7 +12,7 @@ public class MenuScene extends Scene {
 		g.setColor(new Color(75, 0, 0));
 		g.fillRect(0, 0, Driver.screenWidth, Driver.screenHeight);
 		
-		buttonStart.draw(g, 130, 5);
+		buttonStart.draw(g, 110, 38);
 	}
 
 	
@@ -21,6 +21,8 @@ public class MenuScene extends Scene {
 		
 		if (buttonStart.clicked) {
 			
+			SceneManager.gs.setActive(true);
+			SceneManager.ms.setActive(false);
 			
 		}
 	}
