@@ -37,7 +37,14 @@ public class Driver extends JPanel
 	long frameStart = 0;
 	//YO MAMAa
 	
-	//test reset
+	/*
+	 * To Make Your Branch the Same as Master Again:
+	 *      - Right click the repository
+	 *      - Reset
+	 *      - Click master & Reset type = hard
+	 *      - Then right click the repository
+	 *      - push branch
+	 */
 	
 	// ============== end of settings ===================
 
