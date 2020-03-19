@@ -7,10 +7,13 @@ public class MenuScene extends Scene {
 	
 	Button buttonStart;
 	
+	BufferedImage menuBackground;
+	
 	Font fntSmall = new Font("Impact", 0, 35);
+	
 	public void draw(Graphics g) {
-		g.setColor(new Color(75, 0, 0));
-		g.fillRect(0, 0, Driver.screenWidth, Driver.screenHeight);
+	
+		g.drawImage(menuBackground, 0, -30, Driver.screenWidth, Driver.screenHeight, null);
 		
 		buttonStart.draw(g, 110, 38);
 	}
@@ -28,7 +31,9 @@ public class MenuScene extends Scene {
 	}
 
 	public void init() {
-		buttonStart = new Button(new Rect(850, 400, 300, 50), null, 0, "Start", fntSmall, Color.GRAY, true, false);
+		menuBackground = Misc.loadImage("/PlagueMenuBackground.png");
+		
+		buttonStart = new Button(new Rect(780, 400, 300, 50), null, 0, "Start", fntSmall, Color.GRAY, true, false);
 	}
 
 }

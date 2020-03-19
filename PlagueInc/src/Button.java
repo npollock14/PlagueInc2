@@ -13,7 +13,7 @@ class Button {
 	String text = "";
 	Font f = new Font("Arial", 0, 12);
 	Color c;
-	Color glowColor = Color.blue;
+	Color glowColor = new Color(95,0,0);
 
 	public Button(Rect bounds, BufferedImage img, int centeringMethod, String text, Font f, Color c, boolean glow,
 			boolean circle) {
@@ -139,7 +139,7 @@ class Button {
 		}else {
 			g.fillRect((int) bounds.pos.x, (int) bounds.pos.y, (int) bounds.w, (int) bounds.h);
 			g.setColor(Color.black);
-			g.drawRect((int) bounds.pos.x, (int) bounds.pos.y, (int) bounds.w, (int) bounds.h);
+			//g.drawRect((int) bounds.pos.x, (int) bounds.pos.y, (int) bounds.w, (int) bounds.h);
 		}
 		if (img != null)
 			g.drawImage(img, (int) bounds.pos.x, (int) bounds.pos.y,
