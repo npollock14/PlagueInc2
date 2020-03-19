@@ -19,7 +19,13 @@ public class GameScene extends Scene {
 		g2.setStroke(new BasicStroke(6));
 		g.setColor(darkRed);
 		g2.drawLine(0, Driver.screenHeight - 200, Driver.screenWidth, Driver.screenHeight - 200);
-
+		g2.drawLine(Driver.screenWidth - 250, Driver.screenHeight-200, Driver.screenWidth-250, Driver.screenHeight);
+		g.setFont(Misc.f);
+		g.setColor(Color.WHITE);
+		g.drawString("Cure", Driver.screenWidth - 200 + 20, Driver.screenHeight-150);
+		for(State s : GlobalInfo.states) {
+			s.draw(g);
+		}
 	}
 
 	@Override

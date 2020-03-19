@@ -90,6 +90,7 @@ public class Driver extends JPanel
 	}
 
 	private void init() {
+		GlobalInfo.init();
 		SceneManager.initManager();
 		SceneManager.ms.init();
 		SceneManager.ms.setActive(true);
